@@ -1,0 +1,19 @@
+CUDA device: b'NVIDIA L40S'
+CUDA warp size: <class 'numba.cuda.stubs.warpsize'>
+Selected CUDA block size: (8, 4)
+Threads per block: 32
+Max iterations: 200
+
+Warming up Numba CPU and CUDA compilation...
+Warm-up complete.
+
+Correctness check on small input...
+Correctness check passed.
+
+          Size |       Pixels |    NumPy (s) |  Numba CPU (s) |     CUDA (s) |   Speedup NumPy/CUDA |    Speedup Numba/CUDA
+---------------------------------------------------------------------------------------------------------------------------
+500x375     |       187500 |     0.119194 |       0.018564 |     0.000783 |               152.17 |                 23.70
+1000x750     |       750000 |     0.439435 |       0.073958 |     0.001288 |               341.24 |                 57.43
+2000x1500    |      3000000 |     2.149151 |       0.294912 |     0.003460 |               621.09 |                 85.23
+3000x2250    |      6750000 |     4.992455 |       0.690429 |     0.010515 |               474.81 |                 65.66
+4000x3000    |     12000000 |    11.098674 |       1.226165 |     0.017518 |               633.55 |                 69.99
